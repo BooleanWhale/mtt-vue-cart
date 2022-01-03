@@ -25,7 +25,9 @@ const app = new Vue({
           name: 'Product 4',
           price: 10.00,
         }
-      ]
+      ],
+      cart: [],
+      showCart: false
     }
   }
 })
