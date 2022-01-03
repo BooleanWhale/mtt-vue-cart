@@ -26,17 +26,20 @@
       <div @click="showCart = !showCart" class="cart__model-bg"></div>
       <div class="cart__content">
         <ul class="cart__list list-none">
-          <li class="cart__item flex-between">
-            <span>Product Name</span>
-            <input class="cart__quantity-input" value="0" type="number"></input>
-            <span>Product Price</span>
-            <button class="cart__remove-button">X</button>
-          </li>
-          <li class="cart__item">
-            <span>Product Name</span>
-            <input class="cart__quantity-input" value="0" type="number"></input>
-            <span>Product Price</span>
-            <button class="cart__remove-button">X</button>
+          <li
+            class="cart__item flex-between"
+            v-for="product in cart"
+            :key="product.id"
+          >
+            <span>{{ product.name }}</span>
+            <input 
+              class="cart__quantity-input" 
+              v-model.number="product.quantity" 
+              type="number"
+              @change="updateCart(product.id, product.quantity)" 
+            />
+            <span>£{{ product.price }}</span>
+            <button @click="removeFromCart(product.id)" class="cart__remove-button">X</button>
           </li>
         </ul>
         <div class="cart__footer flex-between">
