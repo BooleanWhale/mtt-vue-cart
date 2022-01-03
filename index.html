@@ -38,7 +38,7 @@
               type="number"
               @change="updateCart(product.id, product.quantity)" 
             />
-            <span>£{{ product.price }}</span>
+            <span>£{{ product.price * product.quantity }}</span>
             <button @click="removeFromCart(product.id)" class="cart__remove-button">X</button>
           </li>
         </ul>
