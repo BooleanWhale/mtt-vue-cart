@@ -31,14 +31,14 @@
             v-for="product in cart"
             :key="product.id"
           >
-            <span cart__item__name>{{ product.name }}</span>
+            <span class="cart__item__name">{{ product.name }}</span>
             <input 
               class="cart__item__quantity" 
               v-model.number="product.quantity" 
               type="number"
             />
             <div class="flex-between">
-              <span cart__item__price>£{{ product.price * product.quantity }}</span>
+              <span class="cart__item__price">£{{ product.price * product.quantity }}</span>
               <button @click="removeFromCart(product.id)" class="cart__item__remove-button button--icon">X</button>
             </div>
           </li>
@@ -61,7 +61,7 @@
       >
         <h3 class="product__header">{{ product.name }}</h3>
         <img 
-          src="https://placeimg.com/300/300/any" 
+          src="https://ustvstaticcdn2-a.akamaihd.net/i/channel/picture/2/2/6/0/22600553/22600553,192x192,r:2.jpg" 
           alt="product.name" 
           class="product__image"
           style="width: 220px"

@@ -20,6 +20,8 @@
 $round-1: 2px;
 $round-2: 4px;
 $border-1: solid 1px var(--c-gray-2);
+$border-2: solid 1px var(--c-gray-3);
+$border-3: dashed 1px var(--c-gray-3);
 $page-width-desktop: 1200px;
 $page-margin: 1.5rem;
 
@@ -154,32 +156,44 @@ input {
     z-index: 3;
     background: var(--c-base);
     border-radius: $round-1;
+    width: 90vw;
+    max-width: 20em;
+    font-weight: 500;
     .cart__list {
       padding: 1rem;
       .cart__item {
+        padding: 0.7rem 0;
         &__name {
-
+          color: var(--c-gray-2);
         }
         &__quantity {
           padding: 0.2em;
           text-align: center;
           width: 1.5em;
+          color: var(--c-gray-2);
         }
         &__price {
-
+          color: var(--c-secondary);
         }
         &__remove-button {
           margin-left: 0.5em;
+          color: var(--c-gray-3);
         }
         &:not(:first-child) {
-          border-top: 1px dashed var(--c-gray-2);
+          border-top: $border-3;
         }
       }
     }
     .cart__footer {
       padding: 1rem;
       background: var(--c-gray-4);
+      border-top: $border-2;
+      &__total {
+        color: var(--c-gray-1);
+        font-size: 1.2rem;
+      }
       &__clear-button {
+        color: var(--c-gray-2);
         &:hover {
           background: rgba(0,0,0,0.1);
         }
