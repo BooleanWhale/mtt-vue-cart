@@ -1,7 +1,5 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap");
 /* CSS variables */
 :root {
   --c-base: rgb(255,255,255);
@@ -11,7 +9,7 @@
   --c-secondary: rgb(227,140,91);
   --c-secondary-dark: rgb(189, 101, 50);
   --c-alert: rgb(185, 0, 25);
-  --c-gray-1: rgb(75, 75, 75);
+  --c-gray-1: rgb(105, 105, 105);
   --c-gray-2: rgb(124, 124, 124);
   --c-gray-3: rgb(192, 192, 192);
   --c-gray-3: rgb(192, 192, 192);
@@ -33,13 +31,13 @@ button,
   cursor: pointer;
   border-radius: 2px;
   padding: 0.8em 2em;
-  font-weight: 500;
 }
 
 button--primary,
 .button--primary {
   color: var(--c-base);
   background: var(--c-primary);
+  font-weight: 800;
 }
 
 button--primary:hover,
@@ -51,6 +49,7 @@ button--secondary,
 .button--secondary {
   color: var(--c-base);
   background: var(--c-secondary);
+  font-weight: 800;
 }
 
 button--secondary:hover,
@@ -155,6 +154,7 @@ input [type='number']::-webkit-outer-spin-button {
   position: absolute;
   right: -10px;
   top: -10px;
+  font-size: 0.8rem;
 }
 
 /* Cart */
@@ -222,6 +222,7 @@ input [type='number']::-webkit-outer-spin-button {
 #cart .cart__content .cart__footer__total {
   color: var(--c-gray-1);
   font-size: 1.2rem;
+  font-weight: 800;
 }
 
 #cart .cart__content .cart__footer__clear-button {
@@ -274,8 +275,11 @@ input [type='number']::-webkit-outer-spin-button {
   margin: 1rem auto;
 }
 
-.products .product__description {
-  font-size: 1rem;
+.products .product__price {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--c-gray-1);
+  font-weight: 800;
   margin: 1rem 0;
 }
 
