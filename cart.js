@@ -29,5 +29,17 @@ const app = new Vue({
       cart: [],
       showCart: false
     }
+  },
+  methods: {
+    addToCart(product, quantity) {
+      if (quantity < 1 || isNaN(quantity)) return
+      const index = this.cart.findIndex(cartProduct => cartProduct.id === product.id)
+      if (index >= 0) {
+        this.cart[index].quantity += quantity
+      } else {
+        this.cart.push({ ...product, quantity })
+      }
+      console.log(this.cart)
+    }
   }
 })
