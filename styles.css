@@ -15,7 +15,6 @@
 }
 
 /* SCSS variables */
-/* Clear browser default styles & general styles */
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +32,114 @@ button,
   padding: 0.8em 2em;
 }
 
+button--primary,
+.button--primary {
+  color: var(--c-base);
+  background: var(--c-primary);
+}
+
+button--primary:hover,
+.button--primary:hover {
+  background: var(--c-primary-dark);
+}
+
+button--secondary,
+.button--secondary {
+  color: var(--c-base);
+  background: var(--c-secondary);
+}
+
+button--secondary:hover,
+.button--secondary:hover {
+  background: var(--c-secondary-dark);
+}
+
 a {
   text-decoration: none;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    position: relative;
+    left: calc(50% - 1.5rem);
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
+  }
+}
+
+.flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-none {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation section */
+.nav {
+  padding: 0.8rem 1.5rem;
+  background: var(--c-primary);
+  color: var(--c-base);
+}
+
+.nav__header {
+  font-size: 2.5rem;
+}
+
+.nav__cart {
+  position: relative;
+}
+
+.nav__cart-quantity {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--c-alert);
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  height: 1rem;
+  width: 1rem;
+  padding: 0.3rem;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.nav__cart .cart {
+  background: var(--c-base);
+  color: var(--c-text);
+  border: solid 1px var(--c-gray-2);
+  border-radius: 2px;
+  overflow: auto;
+  padding: 0 1rem;
+  position: absolute;
+  right: 0;
+  width: 12rem;
+}
+
+.nav__cart .cart__list {
+  list-style: none;
+}
+
+.nav__cart .cart__list li {
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=styles.css.map */

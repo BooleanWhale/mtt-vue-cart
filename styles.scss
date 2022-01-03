@@ -19,6 +19,8 @@
 $round-1: 2px;
 $round-2: 4px;
 $border-1: solid 1px var(--c-gray-2);
+$page-width-desktop: 1200px;
+$page-margin: 1.5rem;
 
 // Clear browser default styles & general styles
 * {
@@ -36,6 +38,20 @@ button,
   cursor: pointer;
   border-radius: $round-1;
   padding: 0.8em 2em;
+  &--primary {
+    color: var(--c-base);
+    background: var(--c-primary);
+    &:hover {
+      background: var(--c-primary-dark);
+    }
+  }
+  &--secondary {
+    color: var(--c-base);
+    background: var(--c-secondary);
+    &:hover {
+      background: var(--c-secondary-dark);
+    }
+  }
 }
 
 a {
@@ -67,3 +83,53 @@ a {
   margin: 0;
 }
 
+
+
+/* Navigation section */
+.nav {
+  padding: 0.8rem $page-margin;
+  background: var(--c-primary);
+  color: var(--c-base);
+  
+  &__header {
+    font-size: 2.5rem;
+  }
+  
+  &__cart {
+    position: relative;
+    
+    &-quantity{
+      align-items: center;
+      background: var(--c-alert);
+      border-radius: 50%;
+      text-align: center;
+      font-weight: bold;
+      height: 1rem;
+      width: 1rem;
+      padding: 0.3rem;
+      position: absolute;
+      right: -10px;
+      top: -10px;
+    }
+    
+    .cart {
+      background: var(--c-base);
+      color: var(--c-text);
+      border: $border-1;
+      border-radius: $round-1;
+      overflow: auto;
+      padding: 0 1rem;
+      position: absolute;
+      right: 0;
+      width: 12rem;
+      
+      &__list {
+        list-style: none;
+        
+        li {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}
