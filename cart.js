@@ -26,8 +26,22 @@ const app = new Vue({
           price: 10.00,
         }
       ],
-      cart: [],
-      showCart: false
+      cart: [        
+        {
+          id: 3,
+          name: 'Product 3',
+          price: 10.00,
+          quantity: 5
+        },
+        {
+          id: 4,
+          name: 'Product 4',
+          price: 10.00,
+          quantity: 7
+        }
+      ],
+      currencySymbol: '$',
+      showCart: true
     }
   },
   computed: {

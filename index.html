@@ -38,13 +38,13 @@
               type="number"
             />
             <div class="flex-between">
-              <span class="cart__item__price">£{{ product.price * product.quantity }}</span>
+              <span class="cart__item__price">{{ currencySymbol }}{{ product.price * product.quantity }}</span>
               <button @click="removeFromCart(product.id)" class="cart__item__remove-button button--icon">X</button>
             </div>
           </li>
         </ul>
         <div class="cart__footer flex-between">
-          <span class="cart__footer__total">£{{ totalValue }}</span>
+          <span class="cart__footer__total">{{ currencySymbol }}{{ totalValue }}</span>
           <div class="cart__footer__buttons">
             <button class="cart__footer__clear-button button--text" @click="clearCart()">Clear</button>
             <button class="cart__footer__checkout-button button--primary">Checkout</button>
@@ -66,7 +66,7 @@
           class="product__image"
           style="width: 220px"
         >
-        <p class="product__price">£{{ product.price }}</p>
+        <p class="product__price">{{ currencySymbol }}{{ product.price }}</p>
         <div class="product__cart">
           <div class="product__quantity">
             <input class="product__quantity-input" type="number" v-model.number="product.quantity" :placeholder="0"/>
