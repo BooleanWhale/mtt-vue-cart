@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="cart.js" type="module"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <nav class="nav flex-between">
+      <h2 class="nav__header">Shop Name</h2>
+      <div class="nav__cart">
+        <button class="nav__cart-button button--secondary">Cart</button>
+        <span class="nav__cart-quantity">0</span>
+      </div>
+    </nav>
+
+    <div id="cart">
+      <div class="cart__content">
+        <ul class="cart__list list-none">
+          <li class="cart__item flex-between">
+            <span>Product Name</span>
+            <input class="cart__quantity-input" value="0" type="number"></input>
+            <span>Product Price</span>
+            <button class="cart__remove-button">X</button>
+          </li>
+          <li class="cart__item">
+            <span>Product Name</span>
+            <input class="cart__quantity-input" value="0" type="number"></input>
+            <span>Product Price</span>
+            <button class="cart__remove-button">X</button>
+          </li>
+        </ul>
+        <div class="cart__footer flex-between">
+          <span class="cart__footer__total">0000</span>
+            <button class="cart__footer__clear-button">Clear</button>
+            <button class="cart__footer__checkout-button button--primary">Checkout</button>
+        </div>
+      </div> 
+    </div>
+
+    <section class="products container">
+      <div class="product">
+        <h3 class="product__header">Product 1</h3>
+        <img src="https://via.placeholder.com/150" alt="product" class="product__image">
+        <p class="product__description">Description</p>
+        <div class="product__cart">
+          <div class="product__quantity">
+            <input class="product__quantity" value="0" type="number"></input>
+          </div>
+          <button class="product__add-button button--secondary">Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
