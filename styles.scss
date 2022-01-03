@@ -176,6 +176,7 @@ input {
         padding: 0.7rem 0;
         &__name {
           color: var(--c-gray-2);
+          min-width: 7rem;
         }
         &__quantity {
           padding: 0.2em;
@@ -183,12 +184,23 @@ input {
           width: 1.5em;
           color: var(--c-gray-2);
         }
+        &__price-and-remove {
+          min-width: 4rem;
+        }
         &__price {
           color: var(--c-secondary);
+          width: 100%;
+          text-align: right;
         }
         &__remove-button {
           margin-left: 0.5em;
           color: var(--c-gray-3);
+          .icon-x {
+            width: 0.7em;
+            path {
+              fill: var(--c-gray-3)
+            }
+          }
         }
         &:not(:first-child) {
           border-top: $border-3;
@@ -212,6 +224,13 @@ input {
       }
       &__checkout-button {
         padding: 0.8em 1.2em;
+        .icon-arrow {
+          width: 0.5em;
+          margin-left: 0.5em;
+          path {
+            fill: var(--c-base)
+          }
+        }
       }
     }
   }
