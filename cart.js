@@ -31,17 +31,17 @@ const app = new Vue({
           id: 3,
           name: 'Product 3',
           price: 10.00,
-          quantity: 5
+          quantity: 0
         },
         {
           id: 4,
           name: 'Product 4',
           price: 10.00,
-          quantity: 7
+          quantity: 17
         }
       ],
       currencySymbol: '$',
-      showCart: true
+      showCart: false
     }
   },
   computed: {
@@ -78,6 +78,26 @@ const app = new Vue({
       this.cart = this.cart.map(product => {
         return {...product, quantity: 0}
       })
+    },
+    toggleContrast() {
+      const currentTheme = document.documentElement.getAttribute("data-theme")
+      if (currentTheme === "high-contrast") {
+        document.documentElement.setAttribute('data-theme', 'standard');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'high-contrast');
+      }
     }
   }
 })
+
+
+// const contrastButton = document.querySelector('#contrast-button');
+
+// function switchTheme(e) {
+//     if (e.target.checked) {
+//         document.documentElement.setAttribute('data-theme', 'dark');
+//     }
+//     else {
+//         document.documentElement.setAttribute('data-theme', 'light');
+//     }    
+// }

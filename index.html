@@ -14,16 +14,23 @@
   <div id="app">
     <nav class="nav flex-between">
       <h2 class="nav__header">Shop Name</h2>
-      <div class="nav__cart">
-        <button
-          @click="showCart = !showCart"
-          class="nav__cart-button button--secondary"
-          id="show-cart-button"
-        >Cart</button>
-        <span 
-          class="nav__cart-quantity animate-scale-up" 
-          v-if="totalQuantity > 0"
-        >{{ totalQuantity }}</span>
+      <div class="nav__buttons flex-between">
+        <button 
+          class="nav__high-contrast-button"
+          @click="toggleContrast()"
+          aria-label="toggle high contrast mode"
+        >High Contast Mode</button>
+        <div class="nav__cart">
+          <button
+            @click="showCart = !showCart"
+            class="nav__cart-button button--secondary"
+            id="show-cart-button"
+          >Cart</button>
+          <span 
+            class="nav__cart-quantity animate-scale-up"
+            v-if="totalQuantity > 0"
+          >{{ totalQuantity }}</span>
+        </div>
       </div>
     </nav>
 

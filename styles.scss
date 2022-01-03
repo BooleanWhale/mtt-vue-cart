@@ -3,7 +3,7 @@
 
 
 /* CSS variables */
-:root {
+:root, [data-theme="standard"] {
   --c-base: rgb(255,255,255);
   --c-text: rgb(27, 27, 27);
   --c-primary: rgb(111,187,224);
@@ -13,6 +13,22 @@
   --c-alert: rgb(185, 0, 25);
   --c-gray-1: rgb(105, 105, 105);
   --c-gray-2: rgb(124, 124, 124);
+  --c-gray-3: rgb(192, 192, 192);
+  --c-gray-3: rgb(192, 192, 192);
+  --c-gray-4: rgb(233,232,230);
+  --c-overlay: rgba(100,100,100,0.5);
+}
+
+[data-theme="high-contrast"] {
+  --c-base: rgb(255,255,255);
+  --c-text: rgb(27, 27, 27);
+  --c-primary: rgb(0, 111, 167);
+  --c-primary-dark: rgb(65, 142, 180);
+  --c-secondary: rgb(131, 48, 0);
+  --c-secondary-dark: rgb(78, 29, 0);
+  --c-alert: rgb(185, 0, 25);
+  --c-gray-1: rgb(71, 71, 71);
+  --c-gray-2: rgb(100, 100, 100);
   --c-gray-3: rgb(192, 192, 192);
   --c-gray-3: rgb(192, 192, 192);
   --c-gray-4: rgb(233,232,230);
@@ -113,6 +129,9 @@ input {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+} 
 
 
 /* Navigation section */
@@ -125,6 +144,13 @@ input {
     font-size: 2.5rem;
   }
   
+  &__high-contrast-button {
+    margin-right: 1rem;
+    &:hover {
+      background: var(--c-gray-4);
+    }
+  }
+
   &__cart {
     position: relative;
     
