@@ -48,15 +48,27 @@
     </div>
 
     <section class="products container">
-      <div class="product">
-        <h3 class="product__header">Product 1</h3>
-        <img src="https://placeimg.com/300/300/any" alt="product" class="product__image">
-        <p class="product__description">Description</p>
+      <div 
+        class="product"
+        v-for="product in products"
+        :key="product.id"
+      >
+        <h3 class="product__header">{{ product.name }}</h3>
+        <img 
+          src="https://placeimg.com/300/300/any" 
+          alt="product.name" 
+          class="product__image"
+          style="width: 220px"
+        >
+        <p class="product__price">£{{ product.price }}</p>
         <div class="product__cart">
           <div class="product__quantity">
-            <input class="product__quantity" value="0" type="number"></input>
+            <input class="product__quantity-input" type="number" v-model.number="product.quantity"/>
           </div>
-          <button class="product__add-button button--secondary">Add to cart</button>
+          <button
+            @click="addToCart(product, product.quantity)"
+            class="product__add-button button--secondary"
+          >Add to cart</button>
         </div>
       </div>
     </section>
