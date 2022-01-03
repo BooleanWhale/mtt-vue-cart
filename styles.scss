@@ -168,6 +168,9 @@ input {
         &__price {
 
         }
+        &__remove-button {
+          margin-left: 0.5em;
+        }
         &:not(:first-child) {
           border-top: 1px dashed var(--c-gray-2);
         }

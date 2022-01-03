@@ -37,8 +37,10 @@
               v-model.number="product.quantity" 
               type="number"
             />
-            <span cart__item__price>£{{ product.price * product.quantity }}</span>
-            <button @click="removeFromCart(product.id)" class="cart__remove-button button--icon">X</button>
+            <div class="flex-between">
+              <span cart__item__price>£{{ product.price * product.quantity }}</span>
+              <button @click="removeFromCart(product.id)" class="cart__item__remove-button button--icon">X</button>
+            </div>
           </li>
         </ul>
         <div class="cart__footer flex-between">
