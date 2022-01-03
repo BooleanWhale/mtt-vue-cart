@@ -60,11 +60,10 @@ const app = new Vue({
     removeFromCart(productId) {
       this.cart = this.cart.filter(product => product.id != productId)
     },
-    updateCart(productId, quantity) {
-      if (quantity === 0) this.removeFromCart(productId)
-    },
     clearCart() {
-      this.cart = []
+      this.cart = this.cart.map(product => {
+        return {...product, quantity: 0}
+      })
     }
   }
 })
