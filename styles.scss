@@ -53,10 +53,33 @@ button,
       background: var(--c-secondary-dark);
     }
   }
+  &--text {
+    padding: 0.8em;
+    background: rgba(0,0,0,0);
+    &:hover {
+      background: rgba(0,0,0,0.1);
+    }
+  }
+  &--icon {
+    padding: 0;
+    background: none;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+input {
+  font-size: 1em;
+  padding: 0.5em;
+  border: solid 1px var(--c-gray-3);
+  border-radius: $round-1;
+  &[type='number']::-webkit-inner-spin-button, 
+  [type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 
@@ -134,6 +157,17 @@ a {
     .cart__list {
       padding: 1rem;
       .cart__item {
+        &__name {
+
+        }
+        &__quantity {
+          padding: 0.2em;
+          text-align: center;
+          width: 1.5em;
+        }
+        &__price {
+
+        }
         &:not(:first-child) {
           border-top: 1px dashed var(--c-gray-2);
         }
@@ -142,6 +176,11 @@ a {
     .cart__footer {
       padding: 1rem;
       background: var(--c-gray-4);
+      &__clear-button {
+        &:hover {
+          background: rgba(0,0,0,0.1);
+        }
+      }
     }
   }
   .cart__model-bg {
@@ -194,8 +233,6 @@ a {
         .product__quantity-input {
           text-align: center;
           width: 100%;
-          padding: 0.5em;
-          border: solid 1px var(--c-gray-3);
         }
       }
       .product__add-button {

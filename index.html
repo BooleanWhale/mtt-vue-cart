@@ -31,20 +31,20 @@
             v-for="product in cart"
             :key="product.id"
           >
-            <span>{{ product.name }}</span>
+            <span cart__item__name>{{ product.name }}</span>
             <input 
-              class="cart__quantity-input" 
+              class="cart__item__quantity" 
               v-model.number="product.quantity" 
               type="number"
             />
-            <span>£{{ product.price * product.quantity }}</span>
-            <button @click="removeFromCart(product.id)" class="cart__remove-button">X</button>
+            <span cart__item__price>£{{ product.price * product.quantity }}</span>
+            <button @click="removeFromCart(product.id)" class="cart__remove-button button--icon">X</button>
           </li>
         </ul>
         <div class="cart__footer flex-between">
           <span class="cart__footer__total">£{{ totalValue }}</span>
           <div class="cart__footer__buttons">
-            <button class="cart__footer__clear-button" @click="clearCart()">Clear</button>
+            <button class="cart__footer__clear-button button--text" @click="clearCart()">Clear</button>
             <button class="cart__footer__checkout-button button--primary">Checkout</button>
           </div>
         </div>
