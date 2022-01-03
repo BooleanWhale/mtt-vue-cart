@@ -90,7 +90,7 @@
       >
         <h3 class="product__header">{{ product.name }}</h3>
         <img 
-          src="https://ustvstaticcdn2-a.akamaihd.net/i/channel/picture/2/2/6/0/22600553/22600553,192x192,r:2.jpg" 
+          v-bind:src="product.image" 
           alt="product.name" 
           class="product__image"
           style="width: 220px"

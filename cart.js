@@ -7,23 +7,27 @@ const app = new Vue({
       products: [
         {
           id: 1,
-          name: 'Product 1',
-          price: 10.00,
+          name: 'Animal product',
+          price: 14.20,
+          image: 'https://placeimg.com/250/250/animals'
         },
         {
           id: 2,
-          name: 'Product 2',
-          price: 10.00,
+          name: 'People product',
+          price: 9.99,
+          image: 'https://placeimg.com/250/250/people'
         },
         {
           id: 3,
-          name: 'Product 3',
+          name: 'Places product',
           price: 10.00,
+          image: 'https://placeimg.com/250/250/arch'
         },
         {
           id: 4,
-          name: 'Product 4',
-          price: 10.00,
+          name: 'Tech product',
+          price: 13.50,
+          image: 'https://placeimg.com/250/250/tech'
         }
       ],
       cart: [],
@@ -56,7 +60,6 @@ const app = new Vue({
       } else {
         this.cart.push({ ...product, quantity })
       }
-      console.log(this.cart)
     },
     removeFromCart(productId) {
       this.cart = this.cart.filter(product => product.id != productId)
