@@ -63,7 +63,7 @@
         <p class="product__price">£{{ product.price }}</p>
         <div class="product__cart">
           <div class="product__quantity">
-            <input class="product__quantity-input" type="number" v-model.number="product.quantity"/>
+            <input class="product__quantity-input" type="number" v-model.number="product.quantity" :placeholder="0"/>
           </div>
           <button
             @click="addToCart(product, product.quantity)"
