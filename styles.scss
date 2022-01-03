@@ -164,6 +164,12 @@ input {
     width: 90vw;
     max-width: 20em;
     font-weight: 500;
+    .cart__empty-message {
+      padding: 1em;
+      text-align: center;
+      color: var(--c-gray-1);
+      font-size: 1.2rem;
+    }
     .cart__list {
       padding: 1rem;
       .cart__item {
@@ -203,6 +209,9 @@ input {
         &:hover {
           background: rgba(0,0,0,0.1);
         }
+      }
+      &__checkout-button {
+        padding: 0.8em 1.2em;
       }
     }
   }

@@ -18,14 +18,15 @@
           class="nav__cart-button button--secondary"
           id="show-cart-button"
         >Cart</button>
-        <span class="nav__cart-quantity">{{ totalQuantity }}</span>
+        <span class="nav__cart-quantity" v-if="totalQuantity > 0">{{ totalQuantity }}</span>
       </div>
     </nav>
 
     <div id="cart" v-if="showCart">
       <div @click="showCart = !showCart" class="cart__model-bg"></div>
       <div class="cart__content">
-        <ul class="cart__list list-none">
+        <div class="cart__empty-message" v-if="totalQuantity === 0">No items in cart</div>
+        <ul class="cart__list list-none" v-else>
           <li
             class="cart__item flex-between"
             v-for="product in cart"
