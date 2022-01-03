@@ -16,8 +16,13 @@
       <h2 class="nav__header">Shop Name</h2>
       <div class="nav__buttons flex-between">
         <button 
+          class="nav__dark-mode-button"
+          @click="toggleTheme('dark-mode')"
+          aria-label="toggle dark mode"
+        >Dark Mode</button>
+        <button 
           class="nav__high-contrast-button"
-          @click="toggleContrast()"
+          @click="toggleTheme('high-contrast')"
           aria-label="toggle high contrast mode"
         >High Contast Mode</button>
         <div class="nav__cart">

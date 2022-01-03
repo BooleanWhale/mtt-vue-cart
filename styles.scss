@@ -7,7 +7,7 @@
   --c-base: rgb(255,255,255);
   --c-text: rgb(27, 27, 27);
   --c-primary: rgb(111,187,224);
-  --c-primary-dark: rgb(65, 142, 180);
+  --c-primary-dark: rgb(198, 213, 221);
   --c-secondary: rgb(227,140,91);
   --c-secondary-dark: rgb(189, 101, 50);
   --c-alert: rgb(185, 0, 25);
@@ -35,6 +35,22 @@
   --c-overlay: rgba(100,100,100,0.5);
 }
 
+[data-theme="dark-mode"] {
+  --c-base: rgb(31, 31, 31);
+  --c-text: rgb(255, 255, 255);
+  --c-primary: rgb(61, 153, 199);
+  --c-primary-dark: rgb(198, 213, 221);
+  --c-secondary: rgb(227,140,91);
+  --c-secondary-dark: rgb(189, 101, 50);
+  --c-alert: rgb(228, 34, 60);
+  --c-gray-1: rgb(236, 236, 236);
+  --c-gray-2: rgb(206, 206, 206);
+  --c-gray-3: rgb(34, 34, 34);
+  --c-gray-3: rgb(153, 153, 153);
+  --c-gray-4: rgb(94, 94, 94);
+  --c-overlay: rgba(100,100,100,0.5);
+}
+
 
 /* SCSS variables */
 $round-1: 2px;
@@ -54,11 +70,18 @@ $page-margin: 1.5rem;
   font-weight: 600;
 }
 
+body {
+  background: var(--c-base);
+  color: var(--c-text)
+}
+
 button,
 .button {
   cursor: pointer;
   border-radius: $round-1;
   padding: 0.8em 2em;
+  background: var(--c-base);
+  color: var(--c-text);
   &--primary {
     color: var(--c-base);
     background: var(--c-primary);
@@ -95,8 +118,10 @@ a {
 input {
   font-size: 1em;
   padding: 0.5em;
+  background: var(--c-base);
   border: solid 1px var(--c-gray-3);
   border-radius: $round-1;
+  color: var(--c-text);
   &[type='number']::-webkit-inner-spin-button, 
   [type='number']::-webkit-outer-spin-button { 
     -webkit-appearance: none;
@@ -145,7 +170,7 @@ input {
   }
   
   &__high-contrast-button {
-    margin-right: 1rem;
+    margin: 0 1rem;
     &:hover {
       background: var(--c-gray-4);
     }
