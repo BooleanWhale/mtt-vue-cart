@@ -30,6 +30,22 @@ const app = new Vue({
       showCart: false
     }
   },
+  computed: {
+    totalValue() {
+      let total = 0;
+      this.cart.forEach(product => {
+        total += product.price * product.quantity
+      })
+      return total
+    },
+    totalQuantity() {
+      let total = 0;
+      this.cart.forEach(product => {
+        total += product.quantity
+      })
+      return total
+    }
+  },
   methods: {
     addToCart(product, quantity) {
       if (quantity < 1 || isNaN(quantity)) return
