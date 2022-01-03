@@ -56,6 +56,15 @@ const app = new Vue({
         this.cart.push({ ...product, quantity })
       }
       console.log(this.cart)
+    },
+    removeFromCart(productId) {
+      this.cart = this.cart.filter(product => product.id != productId)
+    },
+    updateCart(productId, quantity) {
+      if (quantity === 0) this.removeFromCart(productId)
+    },
+    clearCart() {
+      this.cart = []
     }
   }
 })
