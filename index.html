@@ -29,7 +29,7 @@
     <div id="cart" v-if="showCart">
       <div @click="showCart = !showCart" class="cart__model-bg"></div>
       <div class="cart__content">
-        <div class="cart__empty-message" v-if="totalQuantity === 0">No items in cart</div>
+        <div class="cart__empty-message" v-if="cart.length === 0">No items in cart</div>
         <ul class="cart__list list-none" v-else>
           <li
             class="cart__item flex-between"
