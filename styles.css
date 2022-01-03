@@ -1,1 +1,39 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+/* CSS variables */
+:root {
+  --c-base: rgb(255,255,255);
+  --c-text: rgb(27, 27, 27);
+  --c-primary: rgb(111,187,224);
+  --c-primary-dark: rgb(65, 142, 180);
+  --c-secondary: rgb(227,140,91);
+  --c-secondary-dark: rgb(189, 101, 50);
+  --c-alert: rgb(185, 0, 25);
+  --c-gray-1: rgb(75, 75, 75);
+  --c-gray-2: rgb(124, 124, 124);
+  --c-gray-3: rgb(192, 192, 192);
+  --c-gray-3: rgb(192, 192, 192);
+  --c-gray-4: rgb(233,232,230);
+}
+
+/* SCSS variables */
+/* Clear browser default styles & general styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+button,
+.button {
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0.8em 2em;
+}
+
+a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=styles.css.map */
